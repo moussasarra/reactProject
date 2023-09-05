@@ -8,16 +8,17 @@ import  Vol from "../../assets/vol.png";
 import Croisiere from "../../assets/croisiere.png";
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import DuaaComponent from "../../components/DuaaComponent";
 
 
 
 
-export default Service;
+export default Duaa;
 
-function Service() {
+function Duaa() {
     const router = useRouter();
     const handlePress = () => {
-        router.push("/duaa");
+        router.push("/ duaa");
     }
     return (
         <View className="mt-10" style={{flex: 1}}>
@@ -52,7 +53,7 @@ function Service() {
                         showsHorizontalScrollIndicator={false}>
 
                 <View className="bg-white">
-                    <ServiceDisplayer texte="Faîtes Votre Omra Avec Nous" image={Omra} onPress={
+                    <DuaaComponent texte="Faîtes Votre Omra Avec Nous" image={Omra} onPress={
                         () => {
                             router.push("/pelerinage");
                         }
@@ -61,14 +62,14 @@ function Service() {
 
                 <View className="bg-white">
 
-                    <ServiceDisplayer texte="Embarquez pour une expérience inoubliable " image={Vol} onPress={
+                    <DuaaComponent texte="Embarquez pour une expérience inoubliable " image={Vol} onPress={
                         () => {
                             router.push("/vol");
                         }
                     } />
                 </View>
                 <View className="bg-white">
-                    <ServiceDisplayer texte="Vivez l'inoubliable à bord de nos croisières exceptionnelles. " image={Croisiere} onPress={
+                    <DuaaComponent texte="Vivez l'inoubliable à bord de nos croisières exceptionnelles. " image={Croisiere} onPress={
                         () => {
                             console.log("package ");
                         }
